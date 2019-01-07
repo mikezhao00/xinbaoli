@@ -1,0 +1,15 @@
+server:
+    port: 8080
+
+spring:
+    # 多环境配置
+    profiles:
+        active: dev
+    freemarker:
+        cache: false
+        template-loader-path: classpath:/templates
+mybatis:
+    #扫描sql.xml文件
+    mapper-locations: classpath:mapping/*.xml, classpath:mapping/cu/*.xml
+    #自动扫描实体类
+    type-aliases-package: com.george.xinbaoli.entity
